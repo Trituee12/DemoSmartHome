@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+<definition name="mainDefinition" 
+        template="/WEB-INF/webpage/layoutAdmin/main.jsp">
+        <put-attribute name="header" value="/WEB-INF/webpage/layoutAdmin/header.jsp" />  
+        <put-attribute name="menu" value="/WEB-INF/webpage/layoutAdmin/menu.jsp" />  
+        <put-attribute name="body" value="" />  
+        <put-attribute name="footer" value="/WEB-INF/webpage/layoutAdmin/footer.jsp" />  
+        <put-list-attribute name="js" inherit="true" cascade="true">
+          <add-attribute value="/resources/vendor/jquery/jquery.min.js" />
+          <add-attribute value="/resources/vendor/bootstrap/js/bootstrap.bundle.min.js" />
+        <add-attribute value="/resources/vendor/jquery-easing/jquery.easing.min.js" />
+        <add-attribute value="/resources/vendor/chart.js/Chart.min.js" />
+        <add-attribute value="/resources/vendor/datatables/jquery.dataTables.js" />
+        <add-attribute value="/resources/vendor/datatables/dataTables.bootstrap4.js" />
+        <add-attribute value="/resources/js/sb-admin.min.js" />
+        <add-attribute value="/resources/js/ajaxmodal.js" />
+        <add-attribute value="/resources/js/demo/datatables-demo.js" />
+        <add-attribute value="/resources/js/demo/chart-area-demo.js" />
+    	</put-list-attribute>
+    	<put-list-attribute name="stylecss" inherit="true" cascade="true">
+    	 <add-attribute value="/resources/vendor/bootstrap/css/bootstrap.min.css" />
+        <add-attribute value="/resources/vendor/fontawesome-free/css/all.min.css" />
+        <add-attribute value="/resources/vendor/datatables/dataTables.bootstrap4.css" />
+        <add-attribute value="/resources/css/sb-admin.css" />
+    </put-list-attribute>
+          </definition>
+          <definition name="home" extends="mainDefinition">  
+        <put-attribute name="title" value="Home Page" />  
+        <put-attribute name="body" value="/WEB-INF/webpage/dashboardpage/home.jsp" />  
+    </definition>  
+    
+    <definition name="area" extends="mainDefinition">  
+        <put-attribute name="title" value="Home Page" />  
+        <put-attribute name="body" value="/WEB-INF/webpage/dashboardpage/Area.jsp" />  
+    </definition>  
+    
+          <definition name="loginPage" extends="mainDefinition">  
+          	<put-attribute name="header" value="" />  
+    		 <put-attribute name="menu" value="" />  
+    		 <put-attribute name="body" value="/WEB-INF/webpage/dashboardpage/index.jsp" />  
+    		 <put-attribute name="footer" value="" />  
+    </definition>
+    
+          <definition name="register" extends="mainDefinition">  
+          	<put-attribute name="header" value="" />  
+    		 <put-attribute name="menu" value="" />  
+    		 <put-attribute name="body" value="/WEB-INF/webpage/dashboardpage/register.jsp" />  
+    		 <put-attribute name="footer" value="" />  
+    </definition>
+    
+    
+    <definition name="device" extends="mainDefinition">  
+    		 <put-attribute name="body" value="/WEB-INF/webpage/dashboardpage/deviceForm.jsp" />  
+    </definition>
+    
+       <definition name="AreaDeviceUser" extends="mainDefinition">  
+    		 <put-attribute name="body" value="/WEB-INF/webpage/dashboardpage/UserAreaDevice.jsp" />  
+    </definition>
+    
+    
+    <definition name="User.mainDefinition" 
+        template="/WEB-INF/webpage/layoutUser/main.jsp">
+        <put-attribute name="header" value="/WEB-INF/webpage/layoutUser/header.jsp" />  
+        <put-attribute name="menu" value="/WEB-INF/webpage/layoutUser/menu.jsp" />  
+        <put-attribute name="body" value="" />  
+        <put-attribute name="footer" value="/WEB-INF/webpage/layoutUser/footer.jsp" />  
+        <put-list-attribute name="js" inherit="true" cascade="true">
+          <add-attribute value="/resources/vendor/jquery/jquery.min.js" />
+          <add-attribute value="/resources/vendor/bootstrap/js/bootstrap.bundle.min.js" />
+        <add-attribute value="/resources/vendor/jquery-easing/jquery.easing.min.js" />
+        <add-attribute value="/resources/vendor/chart.js/Chart.min.js" />
+        <add-attribute value="/resources/vendor/datatables/jquery.dataTables.js" />
+        <add-attribute value="/resources/vendor/datatables/dataTables.bootstrap4.js" />
+        <add-attribute value="/resources/js/sb-admin.min.js" />
+        <add-attribute value="/resources/js/ajaxmodal.js" />
+        <add-attribute value="/resources/js/demo/datatables-demo.js" />
+        <add-attribute value="/resources/js/demo/chart-area-demo.js" />
+         <add-attribute value="/resources/js/datetimePicker.js" />
+    	</put-list-attribute>
+    	<put-list-attribute name="stylecss" inherit="true" cascade="true">
+    	 <add-attribute value="/resources/vendor/bootstrap/css/bootstrap.min.css" />
+        <add-attribute value="/resources/vendor/fontawesome-free/css/all.min.css" />
+        <add-attribute value="/resources/vendor/datatables/dataTables.bootstrap4.css" />
+        <add-attribute value="/resources/css/sb-admin.css" />
+    </put-list-attribute>
+          </definition> 
+           <definition name="homeUser" extends="User.mainDefinition">  
+        <put-attribute name="title" value="Home Page" />  
+        <put-attribute name="body" value="/WEB-INF/webpage/dashboardUser/home.jsp" />  
+    </definition> 
+    
+     <definition name="AreaDevice" extends="User.mainDefinition">  
+        <put-attribute name="title" value="Home Page" />  
+        <put-attribute name="body" value="/WEB-INF/webpage/dashboardUser/AreaDevice.jsp" />  
+    </definition> 
+    
+      <definition name="historyStatus" extends="User.mainDefinition">  
+        <put-attribute name="title" value="Home Page" />  
+        <put-attribute name="body" value="/WEB-INF/webpage/dashboardUser/history.jsp" />  
+    </definition> 
+    
+     <definition name="myDevice" extends="User.mainDefinition">  
+        <put-attribute name="title" value="Home Page" />  
+        <put-attribute name="body" value="/WEB-INF/webpage/dashboardUser/deviceForm.jsp" />  
+    </definition> 
+    
+    
+</tiles-definitions>
